@@ -1,4 +1,4 @@
-import { MongoOIDCError } from "mongodb";
+
 import mongoose from "mongoose";
 
 const livroSchema = new mongoose.Schema(
