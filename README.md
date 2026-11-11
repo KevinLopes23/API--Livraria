@@ -1,72 +1,64 @@
+<div align="center">
+
 # 📚 API Livraria
 
-API para gerenciamento de livros e autores, permitindo cadastro, consulta, atualização e remoção de registros.
+**API de livraria com Node.js, Express e MongoDB (Mongoose).**
 
-## 🚀 Tecnologias Utilizadas
-- Node.js
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+</div>
+
+## 💡 Sobre
+
+Projeto de estudo de um curso de Node.js: uma API para o catálogo de uma livraria, com modelo de livro no Mongoose (título, editora, preço e páginas) e conexão ao MongoDB configurada por variável de ambiente. Por enquanto a única rota de dados exposta é a listagem de livros.
+
+## ✨ Funcionalidades
+
+- Listagem de livros salvos no MongoDB
+- Modelo `Livro` com Mongoose
+- Configuração da conexão via `.env` (dotenv)
+
+## 🛠️ Tecnologias
+
+- Node.js (ES Modules)
 - Express
-- MongoDB (Mongoose)
-- JavaScript (ES6+)
+- MongoDB + Mongoose
+- dotenv, nodemon
 
-## 📂 Estrutura do Projeto
-```
-API--Livraria/
-│-- src/
-│   ├── controllers/
-│   │   ├── AutorController.js
-│   │   ├── LivroController.js
-│   ├── models/
-│   │   ├── Autor.js
-│   │   ├── Livro.js
-│   ├── routes/
-│   │   ├── autoresRoutes.js
-│   │   ├── livrosRoutes.js
-│   ├── config/
-│   │   ├── dbConfig.js
-│   ├── app.js
-│-- package.json
-│-- README.md
+## 📌 Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/` | Rota de boas-vindas |
+| `GET` | `/livros` | Lista todos os livros |
+
+## 🚀 Como rodar
+
+Requer Node.js e uma instância do MongoDB (local ou Atlas).
+
+1. Crie um arquivo `.env` na raiz:
+
+```env
+DB_CONNECTION_STRING=
 ```
 
-## 🛠 Configuração e Instalação
-1. **Clone o repositório**
-   ```sh
-   git clone https://github.com/seu-usuario/API--Livraria.git
-   cd API--Livraria
-   ```
+2. Rode:
 
-2. **Instale as dependências**
-   ```sh
-   npm install
-   ```
+```bash
+git clone https://github.com/KevinLopes23/API--Livraria.git
+cd API--Livraria
+npm install
+npm run dev
+```
 
-3. **Configure o banco de dados**
-   - Crie um arquivo `.env` na raiz do projeto e adicione a URL do banco MongoDB:
-   ```env
-   MONGO_URI=mongodb://localhost:27017/livraria
-   ```
+A API sobe em `http://localhost:3000`.
 
-4. **Inicie o servidor**
-   ```sh
-   npm start
-   ```
-   O servidor estará rodando em `http://localhost:3000`
+## 📄 Licença
 
-## 📌 Rotas Disponíveis
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE).
 
-### 📖 Livros
-- **`GET /livros`** - Retorna todos os livros
-- **`GET /livros/:id`** - Retorna um livro específico
-- **`POST /livros`** - Cadastra um novo livro
-- **`PUT /livros/:id`** - Atualiza um livro existente
-- **`DELETE /livros/:id`** - Remove um livro
+## 👤 Autor
 
-### ✍️ Autores
-- **`GET /autores`** - Retorna todos os autores
-- **`GET /autores/:id`** - Retorna um autor específico
-- **`POST /autores`** - Cadastra um novo autor
-- **`PUT /autores/:id`** - Atualiza um autor existente
-- **`DELETE /autores/:id`** - Remove um autor
-
----
-📌 *Desenvolvido por Kevin(https://github.com/KevinLopes23).*
+Feito por [Kevin Lopes](https://github.com/KevinLopes23)
